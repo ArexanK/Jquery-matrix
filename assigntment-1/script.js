@@ -35,4 +35,11 @@ $("h1").mouseenter(function () {
   });
 });
 
-
+let textAvailable = true;
+$("p").mouseenter(function () {
+  if ($(this).text().trim().length > 0) {
+    $(this).hide();
+  } else {
+    $(this).show();
+  }
+});
