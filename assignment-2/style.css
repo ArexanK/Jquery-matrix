@@ -1,0 +1,26 @@
+.flip {
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.image-container {
+  perspective: 1000px;
+}
+
+img {
+  width: 800px;
+  height: 300px;
+}
+
+
+#section1-img2,
+#section2-img2,
+#section3-img2 {
+  display: none;
+  visibility: hidden;
+  position: absolute;
+}
