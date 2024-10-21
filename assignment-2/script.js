@@ -1,17 +1,15 @@
-$("#section1-img1").click(function () {
-  $(this).toggleClass("flipped");
+function flipImages(sectionImg1, sectionImg2) {
+  $(sectionImg1).click(function () {
+    $(this).addClass("flipped");
+    $(sectionImg2).removeClass("flipped");
+  });
 
-  setTimeout(() => {
-    $(this).css("visibility", "hidden");
-    $("#section1-img2").css("visibility", "visible").addClass("flipped");
-  }, 300);
-});
+  $(sectionImg2).click(function () {
+    $(this).addClass("flipped");
+    $(sectionImg1).removeClass("flipped");
+  });
+}
 
-$("#section1-img2").click(function () {
-  $(this).removeClass("flipped");
-
-  setTimeout(() => {
-    $(this).css("visibility", "hidden");
-    $("#section1-img1").css("visibility", "visible").removeClass("flipped");
-  }, 300);
-});
+flipImages("#section1-img1", "#section1-img2");
+flipImages("#section2-img1", "#section2-img2");
+flipImages("#section3-img1", "#section3-img2");
